@@ -14,8 +14,5 @@ print(out)
 range(d[0], d[1])"""
 # task 14
 files = input(">").split()
-def sas(s):
-    exp = s.split(".")[-1]
-    return exp.lover() == "py"
-out = list(filter(sas, files))
+out = list(filter(lambda s: s.split(",")[-1].lower == "py", files))
 print(out)
