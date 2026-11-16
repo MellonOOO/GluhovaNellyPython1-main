@@ -1,46 +1,127 @@
-import string
-# task 1
-sim = input()
-print(ord(sim))
-# task 2
-first_sim = input()
-second_sim = input()
-if ord(first_sim) > ord(second_sim):
-    print(ord(first_sim)-ord(second_sim))
-else:
-    print(ord(second_sim)-ord(first_sim))
+# # 1
+# name = input()
+# print(name.capitalize())
+# #
+# # #2
+# word = input()
+# print(word.upper())
+#
+# #3
+# u = input()
+# print(u.strip())
+#
+# #4
+# i = input()
+# print(i.replace(" ", "_"))
+#
+# #5
+# A = input()
+# print(A.lower().count("a"))
 
-# task 3
-stroka = input()
-fin_str = ""
-k = int(input())
-for i in stroka:
-    if i != " ":
-        sim = chr(ord(i) + k)
-        if ord(sim) >= 122 - k:
-            sim = chr(97+k + -((122 -ord(i))))
-            fin_str += sim
-        else:
-            fin_str += sim
-    else:
-        fin_str += " "
-print(fin_str)
-# task 4
-stroka = input()
-eng_let = string.ascii_letters
-count_eng_let = 0
-for i in eng_let:
-    if i in stroka:
-        count_eng_let += 1
-dig = string.digits
-count_dig = 0
-for i in dig:
-    if i in stroka:
-        count_dig += 1
-pun = string.punctuation
-count_pun = 0
-for i in pun:
-    if i in stroka:
-        count_pun += 1
-el_count = len(stroka) - count_pun - count_dig - count_eng_let
+#6
+line = input()
+word1 = input()
+
+if word1 in line:
+    print("Слово есть")
+else:
+    print("Слова нет")
+#7
+
+file = input()
+if file.endswith(".txt"):
+    print("Файл есть")
+else:
+    print("Нету такого расширения")
+
+#8
+
+vol = "аяеёюэщтуы"
+vol = vol + vol.upper()
+c = 0
+s = input()
+for i in s:
+    if i in vol:
+        c += 1
+print(f"{c} гласных")
+
+#9
+import string
+c = 0
+s = input()
+for i in s:
+    if i in string.digits:
+        c += 1
+print(f"{c} цифр")
+
+#10
+s = input()
+s = s.split()
+print(len(s))
+
+#11
+
+name1 = input()
+lon = ""
+for word in name1.split():
+    if len(word) > len(lon):
+        lon = word
+print(lon)
+
+#12
+
+name2 = input()
+lon1 = ""
+for word in name2:
+    lon1 = word + lon1
+print(lon1)
+print(name2[::-1])
+
+#13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = [i**2 for i in range(10) if i % 3 != 0]
+print(a)
+b = [int(i) for  i in input().split()]
+print(b)
+x, y = [int(i) for i in input().split()]
+print(x)
+print(y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
